@@ -3,6 +3,7 @@
     <head>
         <title>HTML Basics DEMO</title>
         <style>
+                 
             body {
                 background-color: azure;
             }
@@ -12,13 +13,35 @@
             td{
                 border:1px solid black;
                 border-collapse: collapse;
-
             }
+
+            .header{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap:10px;
+                grid-template-areas: "item1 item2"}
+
+            .item1{grid-area: item1;
+                background-color: lightblue;
+                text-align: center;
+                grid-area: 1;
+            }
+
+            .item2{grid-area: item2;
+                background-color: lightgreen;
+                text-align: center;}
+                
             form{
                 width: 40%;
                 background-color: whitesmoke;
                 padding: 20px;
                 border-radius: 8px;
+            }
+
+            @media(max-width:400px){
+                body{
+                    background-color: black;
+                }
             }
             
         </style> 
@@ -27,7 +50,14 @@
     <body>
         <div class = "header">
         <h1 style = "color: blue;text-align:center"> Welcome to <span id = "highlight">HTML!</span></h1>
-        </div> 
+
+        <div class="item1">
+            <h1>Item 1</h1>
+        </div>
+        <div class="item2">
+            <h1>Item 2</h1>
+        </div>
+    </div> 
         <p>This is the paragraph element.<b>HTML</b> uses tags to mark up content.</p>
         <img src="data:image/jpeg;base64,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"alt="HTML Logo">
         <p>To learn more about HTML/Visit
