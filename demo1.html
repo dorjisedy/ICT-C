@@ -15,7 +15,7 @@
                 border-collapse: collapse;
             }
 
-            .header{
+            /* .header{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 gap:10px;
@@ -29,7 +29,25 @@
 
             .item2{grid-area: item2;
                 background-color: lightgreen;
-                text-align: center;}
+                text-align: center;
+                grid-area: right;} */
+
+            .header{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 1vw;
+                background-color: darkgreen;
+                color: white;
+            }
+
+            .item1{
+                flex: 0 0 auto;
+            }
+
+            .item2{
+                flex: 0 0 auto;
+            }
                 
             form{
                 width: 40%;
@@ -42,20 +60,25 @@
                 body{
                     background-color: black;
                 }
+                .header{
+                flex-direction: column;
+                align-items: center;
+                }
             }
+
             
         </style> 
         <link rel = "stylesheet" href="styles.css">   
     </head>
     <body>
         <div class = "header">
-        <h1 style = "color: blue;text-align:center"> Welcome to <span id = "highlight">HTML!</span></h1>
+        <!-- <h1 style = "color: blue;text-align:center"> Welcome to <span id = "highlight">HTML!</span></h1> -->
 
         <div class="item1">
-            <h1>Item 1</h1>
+            <h1>HTML</h1>
         </div>
         <div class="item2">
-            <h1>Item 2</h1>
+            <h1>CSS</h1>
         </div>
     </div> 
         <p>This is the paragraph element.<b>HTML</b> uses tags to mark up content.</p>
